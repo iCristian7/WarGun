@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollowScript : MonoBehaviour {
 
 	public GameObject target;
-
+	public float offsety = 1.5f;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,7 +14,7 @@ public class CameraFollowScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = new Vector3 (target.transform.position.x, target.transform.position.y, -100);
+		transform.position = new Vector3 (target.transform.position.x, target.transform.position.y + offsety, -100);
 		
 	}
 }
